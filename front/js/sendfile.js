@@ -18,7 +18,7 @@ function upload(file) {
     })
 };
 
-document.getElementById('#btn').addEventListener('click', function (event) {
+document.getElementById('btn').addEventListener('click', function (event) {
     let input = document.getElementById('input');
     let data = new FormData();
     data.append('file', input.files[0]);
