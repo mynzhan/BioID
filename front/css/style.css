@@ -1,0 +1,22 @@
+html,
+body {
+    height: 100%;
+    margin: 0%;
+    padding: 0%;
+}
+
+.main {
+    height: 100%;
+    margin: 0%;
+    padding: 0%;
+    background: #757575;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input {
+    font-size: 30px;
+    font: bold;
+    color: #fff;
+}
