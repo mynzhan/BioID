@@ -1,4 +1,4 @@
-from flask import Flask, request
+from flask import Flask, request, render_template
 import os
 from detect_face import control
 
@@ -12,5 +12,10 @@ def hello_world():
     fnname = file.filename
     file.save(imgroot + fnname)
     vector = control(filename=imgroot + fnname)
-    return {"success": "Succesfully"}, 200
+    return render_template('index.html', result="Successfully"), 200
+
+@app.route('/')
+def hello():
+    return render_template('index.html')
+    
     
