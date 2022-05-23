@@ -12,7 +12,7 @@ def hello_world():
     fnname = file.filename
     file.save(imgroot + fnname)
     vector = control(filename=imgroot + fnname)
-    return render_template('index.html', result="Successfully"), 200
+    return {'msg': "Succes"}, 200
 
 @app.route('/')
 def hello():

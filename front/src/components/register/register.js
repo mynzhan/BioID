@@ -6,7 +6,7 @@ import "./register.css";
 
 export const Register = () => {
   return (
-    <div className="flex justify-center items-center h-screen bg-gray-100">
+    <div className="flex justify-center items-center h-screen bg-gray-200">
       <Formik
         initialValues={{
           name: "",
@@ -33,8 +33,8 @@ export const Register = () => {
         onSubmit={(value) => console.log(value)}
       >
         <Form>
-          <div className="px-8 py-6 bg-white shadow-xl">
-            <h1 className="text-center">REGISTER</h1>
+          <div className="flex flex-col px-8 py-6 bg-white shadow-xl">
+            <h1 className="text-2xl font-bold text-center">REGISTER</h1>
             <TextInput name="name" type="text" label="Name" id="name" />
             <TextInput name="email" type="email" label="Email" id="email" />
             <TextInput
@@ -49,11 +49,8 @@ export const Register = () => {
               label="Confirm Password"
               id="confirmPassword"
             />
-            <div className="text-center pt-5">
-              <button
-                type="submit"
-                className="btn btn-primary btn-lg item-center"
-              >
+            <div className="flex items-center justify-center">
+              <button className="px-6 py-2 mt-4 text-white bg-blue-600 rounded-lg hover:bg-blue-900">
                 Register
               </button>
             </div>
@@ -68,18 +65,20 @@ const TextInput = ({ label, ...props }) => {
   const [field, meta] = useField(props);
   console.log(props.name);
   return (
-    <>
-      <label className="form-label" htmlFor={props.name}>
-        {label}
-      </label>
-      <input
-        {...field}
-        className="border-2"
-        placeholder=" "
-      />
-      {meta.touched && meta.error ? (
-        <div className="error">{meta.error}</div>
-      ) : null}
-    </>
+    <div className="mt-4">
+      <div>
+        <label className="block" htmlFor={props.name}>
+          {label}
+        </label>
+        <input
+          {...field}
+          className="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600"
+          placeholder={label}
+        />
+        {meta.touched && meta.error ? (
+          <div className="error">{meta.error}</div>
+        ) : null}
+      </div>
+    </div>
   );
 };

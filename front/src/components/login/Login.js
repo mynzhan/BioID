@@ -4,8 +4,8 @@ import "./Login.css";
 
 export const Login = () => {
   return (
-    <div className="flex flex-1 items-center justify-center ">
-      <div className="px-8 py-6 my-60 text-left bg-white shadow-xl">
+    <div className="flex flex-1 items-center justify-center h-full">
+      <div className="px-8 py-6  text-left bg-white shadow-xl">
         <h3 className="text-2xl font-bold text-center">
           Login to your account
         </h3>

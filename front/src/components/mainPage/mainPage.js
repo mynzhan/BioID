@@ -1,18 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
+import UploadFile from "../UploadFile/UploadFile";
 
 export const MainPage = () => {
+
   return (
-    <div className="container mx-auto mt-12">
-      <img
-        className="mx-auto w-80"
-        src="https://cdn-icons-png.flaticon.com/512/1461/1461141.png"
-        alt="face"
-      />
-      <div className="flex justify-center text-2xl mt-12">
-        <h2>Welcome to FaceID</h2>
-        <h2 className="ml-4 text-blue-700 underline">
-          <a href="/">TRY IT</a> 
-        </h2>
+    <div className="flex justify-center items-center flex-auto">
+      <div className="mx-auto flex items-center">
+        <img
+          className="mx-auto w-80"
+          src="https://cdn-icons-png.flaticon.com/512/1461/1461141.png"
+          alt="face"
+        />
+        <span className="text-center">
+          <h2 className="text-3xl">Добро пожаловать на страницу FaceID</h2>
+          <p className="mt-5">
+            Для теста перетащите картинку на поле ввода или нажмите на кнопку
+          </p>
+          <p></p>
+          <UploadFile />
+        </span>
       </div>
     </div>
   );

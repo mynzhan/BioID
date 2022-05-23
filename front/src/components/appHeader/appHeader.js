@@ -6,7 +6,7 @@ import "./appHeader.css";
 
 export const AppHeader = () => {
   return (
-    <header className="w-full flex-1">
+    <header className="top-0 w-full absolute">
       <nav className="bg-white border-4 text-xl ">
         <div className="container mx-auto px-4 flex justify-between m-2">
           <Link to="/">
